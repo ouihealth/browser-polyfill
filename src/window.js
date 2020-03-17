@@ -1,5 +1,4 @@
-import { EventEmitter } from 'fbemitter';
-import { TextDecoder, TextEncoder } from 'text-encoding';
+import {EventEmitter} from 'fbemitter';
 import Document from './DOM/Document';
 
 import './performance';
@@ -7,7 +6,6 @@ import './performance';
 import HTMLImageElement from './DOM/HTMLImageElement';
 import HTMLCanvasElement from './DOM/HTMLCanvasElement';
 import HTMLVideoElement from './DOM/HTMLVideoElement';
-import CanvasRenderingContext2D from 'expo-2d-context';
 
 global.HTMLImageElement = global.HTMLImageElement || HTMLImageElement;
 global.Image = global.Image || HTMLImageElement;
@@ -16,8 +14,6 @@ global.HTMLVideoElement = global.HTMLVideoElement || HTMLVideoElement;
 global.Video = global.Video || HTMLVideoElement;
 global.HTMLCanvasElement = global.HTMLCanvasElement || HTMLCanvasElement;
 global.Canvas = global.Canvas || HTMLCanvasElement;
-global.CanvasRenderingContext2D =
-  global.CanvasRenderingContext2D || CanvasRenderingContext2D;
 global.WebGLRenderingContext = global.WebGLRenderingContext || function() {};
 
 function checkEmitter() {
@@ -70,8 +66,6 @@ window.removeEventListener = (eventName, listener) => {
 };
 
 window.DOMParser = window.DOMParser || require('xmldom-qsa').DOMParser;
-global.TextDecoder = global.TextDecoder || TextDecoder;
-global.TextEncoder = global.TextEncoder || TextEncoder;
 
 const agent = 'chrome';
 global.userAgent = global.userAgent || agent;

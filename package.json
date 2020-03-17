@@ -62,9 +62,7 @@
     "prettier": "^1.17.0"
   },
   "dependencies": {
-    "expo-2d-context": "^0.0.2",
     "fbemitter": "^2.1.1",
-    "text-encoding": "^0.7.0",
     "xmldom-qsa": "^1.0.3"
   }
 }
