@@ -28,12 +28,8 @@
     "name": "Evan Bacon"
   },
   "license": "MIT",
-  "files": [
-    "src"
-  ],
-  "pre-push": [
-    "lint"
-  ],
+  "files": ["src"],
+  "pre-push": ["lint"],
   "directories": {
     "example": "examples",
     "lib": "src"
@@ -62,6 +58,7 @@
     "prettier": "^1.17.0"
   },
   "dependencies": {
+    "gl-matrix": "^2.4.0",
     "fbemitter": "^2.1.1",
     "xmldom-qsa": "^1.0.3"
   }
