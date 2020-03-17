@@ -1,5 +1,4 @@
 import Node from './Node';
-import CanvasRenderingContext2D from 'expo-2d-context';
 
 class Element extends Node {
   constructor(tagName) {
@@ -44,9 +43,6 @@ class Element extends Node {
     if (contextType != '2d' && possibleContext) {
       return possibleContext;
     }
-    if (contextType === '2d' && possibleContext) {
-      return new CanvasRenderingContext2D(possibleContext);
-    }
 
     return {
       fillText: (text, x, y, maxWidth) => ({}),
@@ -56,7 +52,7 @@ class Element extends Node {
       }),
       fillRect: () => ({}),
       drawImage: () => ({}),
-      getImageData: () => ({ data: new Uint8ClampedArray([255, 0, 0, 0]) }),
+      getImageData: () => ({data: new Uint8ClampedArray([255, 0, 0, 0])}),
       getContextAttributes: () => ({
         stencil: true,
       }),
