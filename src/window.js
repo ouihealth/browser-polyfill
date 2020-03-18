@@ -65,8 +65,6 @@ window.removeEventListener = (eventName, listener) => {
   }
 };
 
-window.DOMParser = window.DOMParser || require('xmldom-qsa').DOMParser;
-
 const agent = 'chrome';
 global.userAgent = global.userAgent || agent;
 global.navigator.userAgent = global.navigator.userAgent || agent;
